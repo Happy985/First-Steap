@@ -1,0 +1,14 @@
+#Exercice 7
+#Les mots stats, solos, sont des palindromes : ils s'écrivent de la même façon à l'endroit et à
+#l'envers. Ecrivez une fonction Palindrome(s) qui prend une chaîne s en entrée et renvoie True si
+#la chaîne est un palindrome et False sinon.
+
+
+def Ex7():
+    x=input("Ecrivez quelques choses: ")
+    for i in range((len(x)//2)):
+        if x[i]!=x[(len(x)-(i+1))]:
+            print(x, "n'est pas une chaine palindrome")
+            break
+    else:
+        print(x, "est une chaine palindrome")
