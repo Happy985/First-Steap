@@ -1,0 +1,29 @@
+#Exercice 8
+#À chaque caractère de l’alphabet est associé un code ASCII. En Python, les fonctions ord et chr
+#permettent de passer d’un caractère à son code ASCII et réciproquement.
+#Pour garder l’anonymat sur des copies d’examen, on souhaite traduire les noms des étudiants
+#en nombres. Ecrire une fonction CodeASCII(), qui prend en entrée une chaine de caractères
+#contenant le prénom et nom en lettres majuscules et renvoie le nombre correspondant. Ecrire
+#la fonction LettreASCII() qui fait l’opération inverse ( à partir d’un nombre, elle renvoie le nom) 
+
+
+def Ex8():
+    S=input("Ecrivez votre nom est prénom: ")
+    Num=CodeASCII(S)
+    Nom=LettreASCII(Num)
+    print("Le code ascii est: ", Num)
+    print("votre nom est: ", Nom)
+    
+    
+def LettreASCII(Num):
+    Nom=""
+    for i in range((len(Num))//3):
+        Nom+=chr(int(Num[i*3:(i+1)*3]))
+    return Nom
+    
+    
+def CodeASCII(x):
+    L=""
+    for i in range(len(x)):
+        L+=str(ord(x[i])).zfill(3)
+    return L
