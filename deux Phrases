@@ -1,0 +1,12 @@
+#Exercice 5
+#On se donne la chaine de caractères suivante : « Les étudiants apprennent les maths et
+#l’informatique \n Les étudiants suivent des cours d’économie »
+#Utiliser la fonction split() pour séparer les deux lignes.
+#Inverser l’ordre des lignes et réécrire la chaine, en utilisant la fonction join().
+
+
+def Ex5():
+    S1=" Les étudiants apprennent les maths et l’informatique \n Les étudiants suivent des cours d’économie "
+    S2=S1.split("\n")
+    print(S2)
+    print(" \n".join([S2[1],S2[0]]))
