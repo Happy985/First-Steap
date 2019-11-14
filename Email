@@ -1,0 +1,18 @@
+#Exercice 10
+#Ecrire une fonction NomUtilisateur() qui prend en entré une adresse email sous la forme
+#Nom@domain et renvoie le nom d’utilisateur. On affiche aussi le nom de domaine de l’adresse
+#mail de cet utilisateur.
+
+
+def Ex10():
+    while True:
+        x=input("Prière d'introduire votre adresse mail: ")
+        if x.count("@")==1:
+            break
+        elif x.count("@")==0:
+            print("votre adresse ne contient pas @")
+        else:
+            print("votre adresse contient plus que @")
+    S=x.split("@")
+    print(" le nom d’utilisateur: ", S[0])
+    print(" le nom de domaine: ", S[1])
