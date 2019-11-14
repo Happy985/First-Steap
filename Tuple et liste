@@ -1,0 +1,27 @@
+#Exercice 9
+#Créer une liste L1 contenant les chiffres de 1 à 5.
+#Créer un tuple T1 à partir de la liste L1.
+#Afficher la longueur de T1, son maximum et son minimum.
+#Calculer la moyenne des éléments du tuple. 
+
+def Ex9():
+    L=Introduire()
+    T=tuple(L)
+    print(f"""  la longeur de cette Tuple: {len(T)}
+    son min {min(T)} et son max {max(T)}""")
+    
+    
+def Introduire():
+    L=[]
+    while True:
+        try:
+            x=int(input("Faire introduire un entier, écriver 88888888 pour arreter la saisi: "))
+            if x==88888888:
+                break
+            if isinstance(x,int):
+                L.append(x)
+                
+        except ValueError:
+            print("Priere d'introduire uniquement les entier")
+        
+    return L
