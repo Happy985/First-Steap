@@ -1,0 +1,32 @@
+#Exercice 3
+#Créer une fonction Tri() qui prend en entrée une liste de nombres et qui renvoie la liste triée par
+#sélection.
+
+def Ex3():
+    L=Introduire()
+    R=Tri(L)
+    return R
+    
+    
+def Tri(L):
+    for i in range(len(L)):
+        m=min(L[i:len(L)])
+        pos=i+L[i:len(L)].index(m)
+        L.pop(pos)
+        L.insert(i,m)
+    return L
+
+def Introduire():
+    L=[]
+    while True:
+        try:
+            x=int(input("Faire introduire un entier, écriver 88888888 pour arreter la saisi: "))
+            if x==88888888:
+                break
+            if isinstance(x,int):
+                L.append(x)
+                
+        except ValueError:
+            print("Priere d'introduire uniquement les entier")
+        
+    return L
