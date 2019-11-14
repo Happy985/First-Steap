@@ -1,0 +1,20 @@
+#Exercice 6
+#Ecrire une fonction estNum(ch), qui prend en entrée une chaine de caractères et renvoie True si
+#cette chaîne ne contient que des caractères numériques.
+
+
+def Ex6():
+    try:
+        x=int(input("Ecrivez quelques choses: "))
+        if str(x)[0]=="-":
+            r= False
+        else:
+            r= True
+            
+    except ValueError:
+        r= False
+    
+    if r:
+        print(r,"La chaine que vous avez introduire ne contient que des chiffres")
+    else:
+        print(r,"La chaine que vous avez introduire contient des caractères autres que les chiffres")
