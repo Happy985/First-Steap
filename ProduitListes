@@ -1,0 +1,29 @@
+#Exercice 2
+#Définir une fonction ProduitListes(L) qui renvoie le produit des éléments d'une liste d’entiers.
+
+def Ex2():
+    L=Introduire()
+    R=ProduitListes(L)
+    return R
+    
+
+def ProduitListes(L):
+    comp=1
+    for i in range(len(L)):
+        comp*=L[i]
+    return comp
+
+def Introduire():
+    L=[]
+    while True:
+        try:
+            x=int(input("Faire introduire un entier, écriver 88888888 pour arreter la saisi: "))
+            if x==88888888:
+                break
+            if isinstance(x,int):
+                L.append(x)
+                
+        except ValueError:
+            print("Priere d'introduire uniquement les entier")
+        
+    return L
